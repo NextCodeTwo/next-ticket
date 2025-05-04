@@ -1,0 +1,11 @@
+node_modules/
+package-lock.json
+.vscode/
+.wrangler/
+wrangler.jsonc
+
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+*/*/*/.DS_Store
+**/.DS_Store

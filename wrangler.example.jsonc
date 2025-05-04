@@ -1,0 +1,37 @@
+// This is a sample wrangler configuration file for a Cloudflare Worker.
+// It includes settings for the worker's name, version, compatibility flags,
+// main entry point, asset directory, compatibility date, KV namespaces, D1 databases,
+// observability, and environment variables.
+{
+	"name": "exmaple-worker",
+    "version": "1.0.0",
+    "compatibility_flags": ["nodejs_compat"],
+    "main": "public/index.js",
+    "assets": {
+		"directory": "./public"
+	},
+	"compatibility_date": "2025-04-09",
+    "kv_namespaces": [
+        { 
+            "binding":"example-kv", 
+            "id": "fill here your kv id" 
+        }
+    ],
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "example-database",
+            "database_id": "example-database-id"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	},
+
+    "vars": {
+        "RESEND_API_KEY": "fill here your resend api key",
+        "COMPANY_EMAIL_NORPELY": "noreply@nextcodetwo.be",
+        "COMPANY_EMAIL_TO": "marketing@nextcodetwo.be",
+        "JWT_SECRET": "fill here your jwt secret"
+    }
+}
